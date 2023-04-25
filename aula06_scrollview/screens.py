@@ -57,10 +57,13 @@ ScreenManager:
             cols: 1
             size_hint: (1, None)
             size_hint_y: None
+            height: 350
             pos_hint: {'center_x': 0.5, 'center_y': 0.20}
             md_bg_color: app.theme_cls.primary_light
             podding_top: "15sp"
             spacing: dp(8)
+            MDSeparator:
+                height: dp(2)
             MDLabel:
                 text: "Primeira linha"
             MDSeparator:
