@@ -1,0 +1,20 @@
+Curso de Desenvolvimento Python para Mobile - Utilizando o framework KivyMD
+
+Pré-requisitos
+- Instalar Python (versão atual)
+- Instalar uma IDE ()
+- Instalar o pip (cmd): 
+	python -m pip install --upgrade pip
+		Verificar bibliotecas já instaladas: pip freeze
+		Instalar novas bibliotecas: pip install <nome>
+- Instalar biblioteca do ambiente virtual:
+	pip install setuptools virtualenv
+- Criar um ambiente virtual dentro da pasta queirá desenvovler:
+	python -m virtualenv venv
+- Ativar o ambiente virtual dentro da pasta dele (venv/Scripts):
+	activate
+- Na pasta venv, instalar os pacotes Kivy e kivymd:
+	pip install Kivy (Pode dar erro)
+	pip install kivy[base] kivy_examples --pre --extra-index-url https://kivy.org/downloads/simple/. (Caso dê erro na anterior)
+	pip install kivymd
+
