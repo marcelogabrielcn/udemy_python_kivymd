@@ -29,13 +29,49 @@ class HomeDB(Screen):
         )
         self.menu.open()
 
-        def fechar_menu(self, button):
-            self.menu.caller = button
-            self.menu.dismiss()
+    def fechar_menu(self, button):
+        self.menu.caller = button
+        self.menu.dismiss()
 
 class Usuarios(Screen):
 	def cadastrar_usuario(self, button):
-		pass
+            self.manager.current = "usuarios"
+            HomeDB.fechar_menu(self, button)
+    
+def salvarUsuarios(self):
+        # Obtendo os valores informados pelo usuário no formulário
+        nome_usuario = self.manager.ids.name.text
+        email = self.manager.ids.senha.text
+        senha = self.manager.ids.senha.text
+        repsenha = self.manager.ids.repsenha.text
+        grupo = self.manager.ids.grupo.text
+
+        if nome_usuario == '':
+            mensagem = 'O nome deve ser preenchido!'
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
+        if email == '':
+            mensagem = 'O email deve ser preenchido!'
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
+        if senha == '':
+            mensagem = 'A senha deve ser preenchida!'
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
+        if repsenha == '':
+            mensagem = 'A confirmação de senha deve ser preenchida!'
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
+        if grupo == '':
+            mensagem = 'O grupo deve ser preenchido!'
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
+
+        # Validando se senha é igual a repetição de senha
+        if senha != repsenha:
+            mensagem = "As senhas não são iguais"
+            self.manager.ids.mensagem.text = mensagem
+            self.manager.current = 'usuarios'
 
 
 sm = ScreenManager()
